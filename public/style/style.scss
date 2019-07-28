@@ -1,0 +1,76 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+$font-family: 'Quicksand', sans-serif;
+$font-size: 1.3rem;
+$theme: rgb(114, 153, 224);
+$light-font: #fff;
+$dark-font: #222;
+
+
+//        Bootstrap
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar-dark {
+  .navbar-brand {
+    color: $navbar-dark-brand-color;
+
+    @include hover-focus {
+      color: $navbar-dark-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $light-font;
+
+      @include hover-focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+        }
+    }   
+
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: $font-size;
+  overflow-x: hidden;
+}
+
+header{
+  a{
+    color: $light-font;
+  }
+}
+
+
+//          Modal
+
+@import "modal";
+
+
+//        Landing
+
+.landing{
+  background: url('../Images/bench-blur-books-459791.jpg') center center no-repeat /cover;
+  width: 100vw;
+  height: 70vh;
+
+  .content{
+    color: $light-font;
+    
+    .btn{
+      font-size: $font-size;
+    }
+  }
+}
