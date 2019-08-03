@@ -38,6 +38,25 @@ $dark-font: #222;
 
 }
 
+.navbar-toggler {
+  border: transparent; 
+
+  @include hover-focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.navbar-nav {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   padding: 0;
   margin: 0;
@@ -47,30 +66,200 @@ body{
   overflow-x: hidden;
 }
 
+.home{
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  color: $dark-font;
+}
+
+
 header{
-  a{
-    color: $light-font;
+  position: absolute;
+  right: 0;
+  left: 0;
+  
+  nav{
+    z-index: 10;
   }
 }
 
+footer{
+  z-index: 20;
+}
 
 //          Modal
 
 @import "modal";
 
 
+
+
+
 //        Landing
 
 .landing{
-  background: url('../Images/bench-blur-books-459791.jpg') center center no-repeat /cover;
+  z-index: 0;
+  position: relative;
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
+  overflow: hidden;
 
   .content{
+    background: url('../Images/background-images-books-15.jpg') center center no-repeat /cover;
     color: $light-font;
+    position: relative;
+
+
+    .main-heading{
+      z-index: 10;
+      position: absolute;
+      margin-top: 20%;
+    }
     
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 255, 0.678);
+    }
     .btn{
       font-size: $font-size;
     }
   }
+
+  .child{
+
+    img{
+      position: relative;
+      top: 15%;
+      right: 80%;
+    }
+  }
+
+  
 }
+
+.all-books{
+  width: 80%;
+  font-size: 1rem;
+}
+
+footer{
+  background: #000;
+  padding: 5% 7%;
+
+  
+}
+
+.card{
+  border-radius: 20px;
+}
+.card-img{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.card-1{
+  background:linear-gradient(135deg, #21d3fd 0%,#b620ff 100%);          
+}
+.card-2{
+  background:linear-gradient(135deg, #fee13f 0%,#fa709a 100%);
+}
+
+.card-3{
+  background:linear-gradient(135deg, #44e0a7 0%,#d5e969 100%);
+}
+
+
+.card-img-section{
+  position: relative;
+  white-space: nowrap;
+}
+
+.card-img-section:hover .fa-heart{
+  opacity: 1;
+}
+
+.fa-heart{
+  position: relative;
+  top: 90px;
+  left: -60px;
+  color: $light-font;
+  opacity: 0;
+
+  &:hover{
+    cursor: pointer;
+    color: red;
+  }
+}
+
+
+
+// Hameburger Menu
+
+.hamb{
+  height: 40px;
+  background: lightcoral;
+  padding: 10px 10px;
+  display: block;
+}
+
+.hamb-box{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.hamb-inner{
+  display: block;
+  top: 50%;
+}
+
+
+.hamb-inner, .hamb-inner::before, .hamb-inner::after{
+  background: #fff;
+  width: 40px;
+  height: 4px;
+  border-radius: 5px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.hamb-inner::after, .hamb-inner::before{
+  content: '';
+  display: block;
+}
+.hamb-inner::after{
+  top: 10px;
+}
+.hamb-inner::before{
+  bottom: 10px;
+}
+
+
+
+/* Transition */
+
+.hamb-box:hover .hamb-inner{
+  transform: rotateX(180deg);
+  background: transparent;
+}
+
+.hamb-box:hover .hamb-inner::before{
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamb-box:hover .hamb-inner::after{
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+.book-info{
+  background:linear-gradient(135deg, #084df2 0%,#5d93e6 100%);}
+
+.desc{
+  border-radius: 15px;
+}
+

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class LoginForms extends React.Component {
 
@@ -57,16 +56,13 @@ class LoginForms extends React.Component {
   
 
   render() {
-    
-
-
-  return ReactDOM.createPortal(
+  return (
     <React.Fragment>
-    <div className="modal fade bd-example-modal-xl" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div className="modal fade bd-example-modal-xl" id="exampleModalCenter" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
               <div className="container modal-content" id="container">
                   <div className="form-container sign-up-container">
-                    <form action="#" id="signUpForm" onSubmit={this.handleNewAccount}>
+                    <form  id="signUpForm" onSubmit={this.handleNewAccount}>
                       <h1>Create Account</h1>
                       
                       <input onChange={this.handleChange} name="userName" value={this.state.userName} type="text" placeholder="Name" />
@@ -77,16 +73,17 @@ class LoginForms extends React.Component {
                     </form>
                   </div>
                   <div className="form-container sign-in-container">
-                    <form action="#" id="signInForm" onSubmit={this.handleUserAccount}>
+                    <form  id="signInForm" onSubmit={this.handleUserAccount}>
                       <h1>Sign in</h1>
                       
                       <input onChange={this.handleChange} name="userEmail" value={this.state.userEmail} type="email" placeholder="Email" />
                       <input onChange={this.handleChange} name="userPass" value={this.state.userPass} type="password" placeholder="Password" />
 
-                      <a href="#">Forgot your password?</a>
+                      {/* <a href="#">Forgot your password?</a> */}
                       <button>Sign In</button>
                     </form>
                   </div>
+                  
                   <div className="overlay-container">
                     <div className="overlay">
                       <div className="overlay-panel overlay-left">
@@ -113,8 +110,7 @@ class LoginForms extends React.Component {
                 </div>
           </div>
       </div>
-      </React.Fragment>,
-      document.getElementById('login-forms')
+      </React.Fragment>
   )
   }
 }

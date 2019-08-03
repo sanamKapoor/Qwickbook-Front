@@ -1,15 +1,17 @@
 import React from 'react';
-import LoginForms from './Components/LoginForms';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Home from './Home';
+import DetailSection from './DetailSection';
 
-class App extends React.Component {
-  render() {
+function App() {
   return(
-    <React.Fragment>
-      <LoginForms />
-    </React.Fragment>
-    )
-  }
+  <Router>
+   <React.Fragment>
+    <Route path="/" exact component={Home} />     
+    <Route path="/book"  component={DetailSection} />
+   </React.Fragment>
+   </Router>
+  )
 }
 
-
-export default App;
+export default App
