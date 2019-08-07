@@ -3,22 +3,20 @@ import SingleBook from './SingleBook';
 
 function BookCard() {
   return (
-    <div class="all-books mx-auto">
-      <div class="row container-fluid my-5">
-            <div class="col-lg-3">
+      <div className="row all-books mt-5 mx-5 w-100">
+            <div className="col-lg-3">
               <SingleBook />
             </div>
-            <div class="col-lg-3">
+            <div className="col-lg-3">
               <SingleBook />
             </div>
-            <div class="col-lg-3">
+            <div className="col-lg-3">
               <SingleBook />
             </div>
-            <div class="col-lg-3">
+            <div className="col-lg-3">
               <SingleBook />
             </div>
         </div>
-      </div>
   )
 }
 

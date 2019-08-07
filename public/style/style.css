@@ -10562,7 +10562,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar-brand {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 
 .navbar-dark .navbar-brand {
@@ -11195,7 +11195,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 255, 0.678);
+  background: #0000ffad;
 }
 
 .landing .content .btn {
@@ -11218,25 +11218,13 @@ footer {
   padding: 5% 7%;
 }
 
-.card {
+.single-book, .extra-card {
   border-radius: 20px;
 }
 
 .card-img {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-}
-
-.card-1 {
-  background: linear-gradient(135deg, #21d3fd 0%, #b620ff 100%);
-}
-
-.card-2 {
-  background: linear-gradient(135deg, #fee13f 0%, #fa709a 100%);
-}
-
-.card-3 {
-  background: linear-gradient(135deg, #44e0a7 0%, #d5e969 100%);
 }
 
 .card-img-section {
@@ -11259,6 +11247,14 @@ footer {
 .fa-heart:hover {
   cursor: pointer;
   color: red;
+}
+
+.filter-bar, #book-section {
+  background: #0000ffad;
+}
+
+.category {
+  background: #0000ffad;
 }
 
 .hamb {
@@ -11327,11 +11323,97 @@ footer {
           transform: translate3d(0, -10px, 0) rotate(-45deg);
 }
 
-.book-info {
-  background: linear-gradient(135deg, #084df2 0%, #5d93e6 100%);
-}
-
 .desc {
   border-radius: 15px;
+}
+
+.book-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-of-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.book-card {
+  height: 70vh;
+  width: 70vw;
+  z-index: 10;
+}
+
+.clip {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(135, 206, 250, 0.123);
+  -webkit-clip-path: polygon(23% 0, 100% 0, 100% 100%, 48% 100%);
+          clip-path: polygon(23% 0, 100% 0, 100% 100%, 48% 100%);
+}
+
+.book-card .row .book-card-col {
+  height: 70vh;
+}
+
+.selling-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.main-of-selling {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selling-form-card {
+  height: 70vh;
+  width: 70vw;
+}
+
+.user-form, .selling-form, .book-form {
+  height: 70vh;
+}
+
+#file {
+  width: 125px;
+}
+
+#uploaded {
+  border: 1px dotted #333;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

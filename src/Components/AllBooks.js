@@ -1,12 +1,14 @@
 import React from 'react'
 import BookCard from './BookCard';
+import Pages from './Pages';
 
 function AllBooks() {
   return (
-    <React.Fragment>
+    <div className="row mx-auto">
       <BookCard />
       <BookCard />
-    </React.Fragment>
+      <Pages />
+    </div>
   )
 }
 

@@ -1,13 +1,11 @@
 import React from 'react'
-import HeadSection from './Components/HeadSection';
+import SecondaryHead from './Components/SecondaryHead';
 import BookInfo from './Components/BookInfo';
-import LoginForms from './Components/LoginForms';
 
 function DetailSection() {
   return (
     <React.Fragment>
-      <HeadSection />
-      <LoginForms />
+      <SecondaryHead />
       <BookInfo />
     </React.Fragment>
   )

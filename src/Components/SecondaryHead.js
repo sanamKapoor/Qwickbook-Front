@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function HeadSection() {
+
+function SecondaryHead() {
   return (
-    
-  <header className="text-light">
-  <nav className="navbar navbar-expand-lg navbar-dark mx-5">
-    <Link to="/">
-    <a className="navbar-brand" href="#">QwickBook</a>
-    </Link>
+    <div>
+    <nav className="navbar navbar-expand-lg navbar-light mx-5">
+      <Link to="/">
+      <a className="navbar-brand" href="#">QwickBook</a>
+      </Link>
 
     <button className="navbar-toggler " type="button" data-toggle="collapse"
       data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -24,13 +24,15 @@ function HeadSection() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto float-right-lg">
         <li className="nav-item">
-          <Link to="/sell-book">
+          <Link to="sell-book">
           <a className="nav-link mx-2" href="#">Sell</a>
           </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link mx-2"
-         href="#book-section">Explore</a>
+          <Link to="/">
+            <a className="nav-link mx-2" href="#">Explore</a>
+            </Link>
+          
         </li>
         <li className="nav-item">
           <a className="nav-link mx-2"
@@ -55,8 +57,8 @@ function HeadSection() {
       </ul>
     </div>
   </nav>
-</header>
+  </div>
   )
 }
 
-export default HeadSection
+export default SecondaryHead
