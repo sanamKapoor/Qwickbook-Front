@@ -1,28 +1,48 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import BookInfo from './BookInfo';
+import axios from 'axios';
 
-function SingleBook() {
+class SingleBook extends React.Component {
+
+  state = {
+    data: null
+  }
+
+  renderBook = () => {
+    console.log('Clicked');
+  }
+
+
+  render() {
+    const { title, author, edition, price, owner } = this.props.book;
+    const imageUrl = this.props.image;
+    console.log(imageUrl);
   return (
     <Link to="/book">
-        <div className="single-book card shadow">
+        <div className="single-book card shadow my-4" >
              <div className="card-img-section">
-                <img src="https://cdn.shopify.com/s/files/1/0051/7692/files/25-cd-stack_660x.progressive.jpg?v=1558566351" alt=""
-              className="h-75 card-img"></img>
+              <img src={imageUrl} alt="book"/>
                 <i className="fas fa-heart fa-2x rounded-circle text-center m-2"></i>
             </div>
-            <div className="card-body ">
+            <div className="card-body " onClick={() => this.renderBook }>
               <div className="card-text">
-                <p className="text-dark bg-dark d-inline-block border rounded">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem, illo.</p>
+                <p className="text-dark lead d-inline-block rounded">{title} by {author} (Edition - {edition})
+</p>
                   <br />
-                <p className="border rounded text-dark bg-dark d-inline-block">Price:      100INR only</p>
+                <p className="rounded text-dark d-inline-block lead">Price - {price}INR </p>
                 <br />
-                <p className="border rounded text-dark bg-dark d-inline-block">Aman Sharma 8473863895</p>
+                <ul className="list-unstyled text-dark">
+                  <li className="lead list-unstyled-item">Seller Info :</li>
+                  <li>{owner.firstname}</li>
+                  <li>{owner.mobile}, {owner.email}</li>
+                </ul>
               </div>
             </div>
           </div>
           </Link>
   )
+}
 }
 
 export default SingleBook

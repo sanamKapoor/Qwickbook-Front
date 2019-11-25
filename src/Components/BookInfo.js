@@ -2,7 +2,10 @@ import React from 'react';
 
 
 function BookInfo() {
+  
   return (
+    
+
     <div className="main-of-info">
     <div className="container-fluid book-page">
     <div className="card shadow-lg border rounded-lg book-card">
@@ -10,20 +13,10 @@ function BookInfo() {
       <div className="row">
         <div className="col p-5 book-card-col">
             <div className="row">
-                <div className="col-3">
-                    <div className="row d-flex flex-column">
-                        <div className="col mt-2">
-                          <img src="https://images-na.ssl-images-amazon.com/images/I/51so%2BygbAGL._SX363_BO1,204,203,200_.jpg" alt="" className="img-fluid img-thumbnail" />
-                        </div>
-                        <div className="col mt-2">
-                          <img src="https://bitemyapp.com/images/lpthw_digi_toc.png" alt="" className="img-fluid img-thumbnail" />
-                        </div>
-                        <div className="col mt-2">
-                          <img src="https://bitemyapp.com/images/lpthw_phys.jpg" alt="" className="img-fluid img-thumbnail" />
-                        </div>
-                      </div>
+                <div className="col-2">
+                {/* { console.log(this.props.id) } */}
                 </div>
-                <div className="col-9 p-3">
+                <div className="col-10 p-3">
                     <img src="https://images-na.ssl-images-amazon.com/images/I/51so%2BygbAGL._SX363_BO1,204,203,200_.jpg" alt="" className="img-fluid" />
                 </div>
               </div>

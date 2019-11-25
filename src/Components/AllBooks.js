@@ -1,13 +1,12 @@
 import React from 'react'
 import BookCard from './BookCard';
-import Pages from './Pages';
+// import Pages from './Pages';
 
 function AllBooks() {
   return (
     <div className="row mx-auto">
       <BookCard />
-      <BookCard />
-      <Pages />
+      {/* <Pages /> */}
     </div>
   )
 }

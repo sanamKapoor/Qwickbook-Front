@@ -5,6 +5,7 @@ import FeatureCards from './Components/FeatureCards';
 import HeadSection from './Components/HeadSection';
 import LoginForms from './Components/LoginForms';
 import BooksAndCatg from './Components/BooksAndCatg';
+import Footer from './Components/Footer';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <FeatureCards />
       <BooksHead />
       <BooksAndCatg />
+      <Footer />
     </React.Fragment>
   )
 }
